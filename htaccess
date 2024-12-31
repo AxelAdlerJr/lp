@@ -1,0 +1,9 @@
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+RewriteRule ^lp/$ page60824689.html [NC]
+RewriteRule ^lp//$ page60824689.html [NC]
+
+
