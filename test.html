@@ -28,20 +28,175 @@
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
   <link rel="preconnect" href="https://analytics.ahrefs.com" crossorigin />
 
-  <!-- Legacy Tilda CSS (оставим, чтобы старые блоки корректно подгружались) -->
+  <!-- Tilda CSS (старые стили) -->
   <link rel="stylesheet" href="css/tilda-grid-3.0.min.css" />
   <link rel="stylesheet" href="css/tilda-blocks-page60824689.min.css?t=1738707837" />
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
 
-  <!-- Наши стили -->
-  <link rel="stylesheet" href="css/main.min.css" />
+  <!-- Встроенный кастомный CSS -->
+  <style>
+    /* Сбросы */
+    body, h1, h2, p, ul, li, figure { margin: 0; padding: 0; }
+    ul { list-style: none; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      color: #2f2e2e;
+      line-height: 1.5;
+      background: #fff;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    .site-header {
+      padding: 20px 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo img {
+      height: 60px;
+    }
+    .main-nav ul {
+      display: flex;
+      gap: 20px;
+    }
+    .main-nav a {
+      font-weight: 500;
+      color: #634bf5;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 0;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #4a4a4a;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 100px;
+      transition: background-color .2s ease, color .2s ease;
+    }
+    .btn-primary {
+      background-color: #634bf5;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background-color: #5138c1;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 0;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #2f2e2e;
+    }
+    .features ul {
+      max-width: 600px;
+      margin: 0 auto;
+      list-style: disc inside;
+      font-size: 1rem;
+      color: #4a4a4a;
+    }
+    .about p {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: #4a4a4a;
+    }
+
+    /* Subscribe form */
+    .subscribe {
+      background: #f3f4f3;
+    }
+    .subscribe-form {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .subscribe-form input[type="email"] {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 250px;
+    }
+    .btn-secondary {
+      background-color: #fff;
+      color: #634bf5;
+      border: 2px solid #634bf5;
+    }
+    .btn-secondary:hover {
+      background-color: #634bf5;
+      color: #fff;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #fff;
+      padding: 40px 0;
+      text-align: center;
+    }
+    .footer-nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .footer-nav a {
+      color: #634bf5;
+      font-size: .95rem;
+    }
+    .copyright {
+      font-size: .9rem;
+      color: #777;
+    }
+
+    /* Utility */
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0);
+      white-space: nowrap; border: 0;
+    }
+  </style>
 
   <!-- Favicons -->
-  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="icon" href="images/favicon.ico" />
 
-  <!-- Analytics -->
+  <!-- Analytics & Tag Manager -->
   <script async src="https://analytics.ahrefs.com/analytics.js" data-key="RSjhd/7knACsMTz2uNFwHQ"></script>
   <script>
     (function(w,d,s,l,i){
@@ -67,12 +222,11 @@
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-  <!-- Header + навигация -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo">
-        <img src="images/tild6331-3837-4138-a365-313536353764__group_52_1.svg"
-             alt="Adler’s Crypto Insights">
+        <img src="images/tild6331-3837-4138-a365-313536353764__group_52_1.svg" alt="Adler’s Crypto Insights Logo">
       </a>
       <nav class="main-nav">
         <ul>
@@ -84,6 +238,7 @@
     </div>
   </header>
 
+  <!-- Main Content -->
   <main>
     <!-- Hero -->
     <section id="hero" class="hero">
@@ -124,8 +279,7 @@
       <h2>Stay Ahead with Adler’s Insights</h2>
       <form action="/subscribe" method="post" class="subscribe-form">
         <label for="email" class="visually-hidden">Email address</label>
-        <input id="email" type="email" name="email"
-               placeholder="you@example.com" required>
+        <input id="email" type="email" name="email" placeholder="you@example.com" required>
         <button type="submit" class="btn btn-secondary">Subscribe Now</button>
       </form>
     </div>
@@ -133,29 +287,17 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
+    <div class="container">
       <nav class="footer-nav">
         <ul>
           <li><a href="/privacy">Privacy Policy</a></li>
           <li><a href="/terms">Terms of Service</a></li>
-          <li><a href="https://twitter.com/axeladlerjr">Twitter</a></li>
+          <li><a href="https://twitter.com/axeladlerjr" target="_blank">Twitter</a></li>
         </ul>
       </nav>
       <p class="copyright">&copy; 2025 Adler’s Crypto Insights</p>
     </div>
   </footer>
 
-  <!-- Legacy Tilda scripts (если нужны старые эффекты/анимации) -->
-  <script async src="js/tilda-fallback-1.0.min.js"></script>
-  <script nomodule src="js/tilda-polyfill-1.0.min.js"></script>
-  <script defer src="js/tilda-scripts-3.0.min.js"></script>
-  <script async src="js/tilda-blocks-page60824689.min.js?t=1738707837"></script>
-  <script async src="js/lazyload-1.3.min.export.js"></script>
-  <script async src="js/tilda-zero-1.1.min.js"></script>
-  <script async src="js/tilda-zero-scale-1.0.min.js"></script>
-  <script async src="js/tilda-events-1.0.min.js"></script>
-
-  <!-- Ваши скрипты -->
-  <script defer src="js/main.min.js"></script>
 </body>
 </html>
